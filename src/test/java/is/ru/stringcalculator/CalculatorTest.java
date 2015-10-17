@@ -22,9 +22,9 @@ public class CalculatorTest {
 	public void testTwoNumbers(){
 		assertEquals(10,Calculator.add("6,4"));
 	}
-	/*@Test
+	@Test
 	public void testMultipleNumbers(){
-		assertEquals(20,Calculator.add(10,9,1));
-	}*/
+		assertEquals(20,Calculator.add("10,9,1"));
+	}
 
 }
