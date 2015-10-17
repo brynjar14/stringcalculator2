@@ -5,26 +5,25 @@ import org.junit.Test;
 
 public class CalculatorTest {
 
-	public static void main(String args[]) {
+	public void main(String args[]) {
       org.junit.runner.JUnitCore.main("is.ru.stringcalculator.CalculatorTest");
     }
-
-	@Test
-	public void testEmptyString() {
-		assertEquals(0,Calculator.add(""));
-	}
-	
-	@Test 
-	public void testOneNumber(){
-		assertEquals(1,Calculator.add("1"));
-	}
-	@Test	
-	public void testTwoNumbers(){
-		assertEquals(10,Calculator.add("6,4"));
-	}
-	@Test
-	public void testMultipleNumbers(){
-		assertEquals(20,Calculator.add("10,9,1"));
-	}
-
-}
+    private Calculator calculator = new Calculator();
+    
+    @Test
+    public void EmptyString(){
+    	assertEquals(calculator.add(""),0);
+    }
+    @Test 
+    public void testOneNumber(){
+    	assertEquals(calculator.add("4"),4);
+    }
+    @Test
+    public void testTwoNumber(){
+    	assertEquals(calculator.add("4,5"),9);
+    }
+    @Test
+    public void twoNumbersNewline(){
+    	assertEquals(calculator.add("4/n5"),9);
+    }
+  }
