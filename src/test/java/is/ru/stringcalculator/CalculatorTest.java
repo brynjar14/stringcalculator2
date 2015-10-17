@@ -26,4 +26,8 @@ public class CalculatorTest {
     public void twoNumbersNewline(){
     	assertEquals(calculator.add("4/n5"),9);
     }
+    @Test
+    public void threeNumbersDelimited(){
+    	assertEquals(calculator.add("5,6,7"),18);
+    }
   }
