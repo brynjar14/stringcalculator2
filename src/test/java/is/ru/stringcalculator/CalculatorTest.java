@@ -30,4 +30,13 @@ public class CalculatorTest {
     public void threeNumbersDelimited(){
     	assertEquals(calculator.add("5,6,7"),18);
     }
-  }
+    @Test
+    public void negativeInputReturnsExeption(){
+
+    	calculator.add("-1");
+    }
+    /*@Test
+    public void ignoreOver1000(){
+    	assertEquals(calculator.add("10,10,1000"),20);
+    }*/
+    }
